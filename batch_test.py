@@ -29,8 +29,8 @@ parser.add_argument(
 
 if __name__ == "__main__":
     FLAGS = ng.Config('inpaint.yml')
-    ng.get_gpus(1)
-    # os.environ['CUDA_VISIBLE_DEVICES'] =''
+#     ng.get_gpus(1)
+    os.environ['CUDA_VISIBLE_DEVICES']='0'
     args = parser.parse_args()
 
     sess_config = tf.ConfigProto()
